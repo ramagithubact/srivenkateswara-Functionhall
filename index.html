@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SRI VENKATESWARA FUNCTION HALL</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0f0f1a;
+      color: #ffe25f;
+      overflow-x: hidden;
+    }
+
+    .hero-section {
+      text-align: center;
+      padding: 100px 30px;
+      background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
+      color: #ffe25f;
+    }
+
+    .logo-wrapper {
+      display: inline-block;
+      padding: 12px;
+      border-radius: 16px;
+      background: rgba(255, 226, 95, 0.1);
+      box-shadow: 0 0 20px rgba(255, 226, 95, 0.4);
+    }
+
+    .hero-logo {
+      height: 120px;
+      border-radius: 12px;
+      box-shadow: 0 0 30px rgba(255, 226, 95, 0.4);
+    }
+
+    .shining-text {
+      font-size: 2.5rem;
+      font-weight: 900;
+      background: linear-gradient(to right, #ffe25f, #ffffff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmer 6s infinite;
+      text-shadow: 0 0 12px rgba(255, 226, 95, 0.2);
+      margin-top: 20px;
+    }
+
+    @keyframes shimmer {
+      0% { background-position: -500px 0; }
+      100% { background-position: 500px 0; }
+    }
+
+    .animated-tagline {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #ffe25f;
+      margin-top: 10px;
+      animation: fadeSlideUp 1.2s ease-out forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeSlideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .cta-button {
+      margin-top: 30px;
+      padding: 16px 32px;
+      background: linear-gradient(to right, #ffe25f, #fff7a4);
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(255,226,95,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+    }
+
+    .cta-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(255, 226, 95, 0.6);
+    }
+
+    .about-section {
+      background: linear-gradient(135deg, #141424, #1a1a2e);
+      color: #ffe25f;
+      padding: 80px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .about-container {
+      max-width: 900px;
+      margin: 0 auto;
+      backdrop-filter: blur(6px);
+      background: rgba(255, 255, 255, 0.02);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 0 25px rgba(255, 226, 95, 0.08);
+      border: 1px solid rgba(255, 226, 95, 0.1);
+    }
+
+    .about-section h2 {
+      font-size: 2.8rem;
+      margin-bottom: 30px;
+      color: #ffe25f;
+      text-shadow: 0 0 12px rgba(255, 226, 95, 0.3);
+    }
+
+    .about-section p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #fcefb3;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+
+    @keyframes edgeSlide {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(40%); }
+      50% { transform: translateX(0); }
+      75% { transform: translateX(-40%); }
+      100% { transform: translateX(0); }
+    }
+
+    .credit-footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 20px;
+      color: #ffe25f;
+      background: rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(10px);
+      text-shadow: 0 0 6px rgba(255, 226, 95, 0.2);
+      animation: edgeSlide 20s ease-in-out infinite;
+      border-top: 1px solid rgba(255, 226, 95, 0.15);
+      font-weight: bold;
+      margin-top: 100px;
+    }
+
+    .credit-footer img {
+      height: 40px;
+      animation: pulseLogo 3s ease-in-out infinite;
+    }
+
+    @keyframes pulseLogo {
+      0%, 100% {
+        filter: drop-shadow(0 0 6px rgba(255, 226, 95, 0.2));
+      }
+      50% {
+        filter: drop-shadow(0 0 15px rgba(255, 226, 95, 0.5));
+      }
+    }
+	
+	
+	.gallery-section {
+  background: #0f0f1a;
+  padding: 80px 20px;
+  color: #ffe25f;
+  text-align: center;
+}
+
+.gallery-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-shadow: 0 0 10px rgba(255, 226, 95, 0.3);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 226, 95, 0.1);
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(255, 226, 95, 0.4);
+}
+
+.amenities-section {
+  background: linear-gradient(135deg, #1a1a2e, #141424);
+  padding: 80px 20px;
+  color: #ffe25f;
+  text-align: center;
+}
+
+.amenities-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.amenities-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-shadow: 0 0 12px rgba(255, 226, 95, 0.3);
+}
+
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  padding: 10px;
+}
+
+.amenity-item {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 226, 95, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.amenity-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(255, 226, 95, 0.3);
+}
+
+.amenity-item img {
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+
+
+.packages-section {
+  background: #0f0f1a;
+  padding: 80px 20px;
+  color: #ffe25f;
+  text-align: center;
+}
+
+.packages-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.packages-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-shadow: 0 0 10px rgba(255, 226, 95, 0.3);
+}
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.package-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 226, 95, 0.1);
+  border-radius: 16px;
+  padding: 30px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.package-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(255, 226, 95, 0.3);
+}
+
+.package-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #fff8c2;
+}
+
+.package-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  color: #fcefb3;
+}
+
+.package-card li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.package-card .price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ffe25f;
+}
+
+.package-card.premium {
+  border: 1px solid rgba(255, 226, 95, 0.4);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.booking-section {
+  background: linear-gradient(135deg, #1a1a2e, #141424);
+  padding: 80px 20px;
+  color: #ffe25f;
+  text-align: center;
+}
+
+.booking-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(255, 226, 95, 0.08);
+  border: 1px solid rgba(255, 226, 95, 0.1);
+}
+
+.booking-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-shadow: 0 0 12px rgba(255, 226, 95, 0.3);
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.booking-form .form-group {
+  width: 100%;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 226, 95, 0.2);
+  background: rgba(255, 255, 255, 0.03);
+  color: #ffe25f;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.booking-form input::placeholder,
+.booking-form textarea::placeholder {
+  color: #fcefb3;
+}
+
+.booking-form button {
+  margin-top: 10px;
+}
+
+.contact-section {
+  background: #0f0f1a;
+  padding: 80px 20px;
+  color: #ffe25f;
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px rgba(255, 226, 95, 0.3);
+}
+
+.contact-info {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #fcefb3;
+}
+
+.contact-info a {
+  color: #ffe25f;
+  text-decoration: none;
+}
+
+.map-container {
+  margin-top: 30px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(255, 226, 95, 0.1);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 12px;
+}
+.hero-logo {
+  height: auto;
+  max-width: 100%;
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 60px 20px;
+  }
+
+  .shining-text {
+    font-size: 1.8rem;
+  }
+
+  .animated-tagline {
+    font-size: 1rem;
+  }
+
+  .packages-section h2,
+  .gallery-section h2,
+  .about-section h2,
+  .booking-section h2,
+  .contact-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .cta-button {
+    font-size: 0.9rem;
+    padding: 12px 24px;
+  }
+
+  .credit-footer {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+
+/* 🔽 Mobile Responsive Tweaks */
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 60px 20px;
+  }
+
+  .hero-logo {
+    height: auto;
+    max-width: 100%;
+  }
+
+  .shining-text {
+    font-size: 1.8rem;
+  }
+
+  .animated-tagline {
+    font-size: 1rem;
+  }
+
+  .about-section,
+  .gallery-section,
+  .amenities-section,
+  .packages-section,
+  .booking-section,
+  .contact-section {
+    padding: 60px 20px;
+  }
+
+  .about-section h2,
+  .gallery-section h2,
+  .amenities-section h2,
+  .packages-section h2,
+  .booking-section h2,
+  .contact-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .amenities-grid {
+    gap: 15px;
+  }
+
+  .booking-container {
+    padding: 20px;
+  }
+
+  .cta-button {
+    font-size: 0.9rem;
+    padding: 12px 24px;
+  }
+
+  .credit-footer {
+    flex-direction: column;
+    gap: 6px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 80px 30px;
+  }
+
+  .shining-text {
+    font-size: 2.2rem;
+  }
+
+  .animated-tagline {
+    font-size: 1.2rem;
+  }
+
+  .about-section,
+  .gallery-section,
+  .amenities-section,
+  .packages-section,
+  .booking-section,
+  .contact-section {
+    padding: 80px 30px;
+  }
+
+  .about-section h2,
+  .gallery-section h2,
+  .amenities-section h2,
+  .packages-section h2,
+  .booking-section h2,
+  .contact-section h2 {
+    font-size: 2rem;
+  }
+
+  .amenities-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .booking-container {
+    padding: 30px;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 14px 28px;
+  }
+
+  .credit-footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <section class="hero-section">
+    <div class="logo-wrapper">
+      <img src="logo.png" alt="Sri Venkateswara Function Hall Logo" class="hero-logo" />
+    </div>
+    <h1 class="shining-text">SRI VENKATESWARA FUNCTION HALL</h1>
+    <div class="animated-tagline">Celebrations Crafted in Elegance ✨</div>
+    <a href="#booking" class="cta-button">Book Now</a>
+  </section>
+
+  <section class="about-section scroll-reveal" id="about">
+    <div class="about-container">
+      <h2>About Us</h2>
+      <p>
+        <strong>Sri Venkateswara Function Hall</strong> has been a beacon of tradition, elegance, and joyful celebrations for over a decade. Nestled in a serene and accessible location, our hall blends classical charm with modern luxury, creating a truly divine setting for weddings, receptions, and grand gatherings.
+      </p>
+      <p>
+        Rooted in heritage and inspired by devotion, our mission is to provide a spiritual yet sophisticated experience to every guest. From intricately designed interiors to state-of-the-art facilities, every element is curated with attention to detail, grace, and grandeur.
+      </p>
+      <p>
+        Whether you envision a traditional ceremony or a lavish reception, our team ensures every moment is handled with care and perfection — because your celebration deserves nothing less than divine.
+      </p>
+    </div>
+  </section>
+  
+  <section class="gallery-section" id="gallery">
+  <div class="gallery-container">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="images/gallery1.jpg" alt="Wedding Stage"/>
+      <img src="images/gallery2.jpg" alt="Dining Hall"/>
+      <img src="images/gallery3.jpg" alt="Night Lighting"/>
+      <img src="images/gallery4.jpg" alt="Reception Area"/>
+      <img src="images/gallery5.jpg" alt="Grand Entrance"/>
+      <img src="images/gallery6.jpg" alt="Flower Decor"/>
+    </div>
+  </div>
+</section>
+
+<section class="amenities-section" id="amenities">
+  <div class="amenities-container">
+    <h2>Our Amenities</h2>
+    <div class="amenities-grid">
+      <div class="amenity-item">
+        <img src="icons/ac.png" alt="A/C Hall" />
+        <p>A/C Grand Hall</p>
+      </div>
+      <div class="amenity-item">
+        <img src="icons/dining.png" alt="Dining Area" />
+        <p>Spacious Dining</p>
+      </div>
+      <div class="amenity-item">
+        <img src="icons/parking.png" alt="Parking" />
+        <p>Ample Parking</p>
+      </div>
+      <div class="amenity-item">
+        <img src="icons/rooms.png" alt="Guest Rooms" />
+        <p>Luxury Rooms</p>
+      </div>
+      <div class="amenity-item">
+        <img src="icons/sound.png" alt="Sound System" />
+        <p>Audio/Visual Setup</p>
+      </div>
+      <div class="amenity-item">
+        <img src="icons/stage.png" alt="Stage" />
+        <p>Decorated Stage</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="packages-section" id="packages">
+  <div class="packages-container">
+    <h2>Our Packages</h2>
+    <div class="packages-grid">
+      <div class="package-card">
+        <h3>Silver Package</h3>
+        <ul>
+          <li>Hall + Dining (300 Guests)</li>
+          <li>Basic Decoration</li>
+          <li>Standard Lighting & Sound</li>
+          <li>Parking Facility</li>
+        </ul>
+        <div class="price">₹50,000</div>
+      </div>
+
+      <div class="package-card premium">
+        <h3>Gold Package</h3>
+        <ul>
+          <li>Hall + Dining (500 Guests)</li>
+          <li>Premium Stage & Decor</li>
+          <li>AC, LED Wall, DJ Sound</li>
+          <li>Power Backup + Parking</li>
+        </ul>
+        <div class="price">₹90,000</div>
+      </div>
+
+      <div class="package-card">
+        <h3>Custom Package</h3>
+        <ul>
+          <li>Flexible Guest Count</li>
+          <li>Custom Decor Themes</li>
+          <li>Additional Amenities</li>
+          <li>Personalized Services</li>
+        </ul>
+        <div class="price">As per requirements</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="booking-section" id="booking">
+  <div class="booking-container">
+    <h2>Book Your Event</h2>
+    <form class="booking-form" action="#" method="post">
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Your Full Name" required />
+      </div>
+      <div class="form-group">
+        <input type="tel" name="phone" placeholder="Mobile Number" required />
+      </div>
+      <div class="form-group">
+        <input type="date" name="date" required />
+      </div>
+      <div class="form-group">
+        <select name="event" required>
+          <option value="">Select Event Type</option>
+          <option>Wedding</option>
+          <option>Reception</option>
+          <option>Birthday</option>
+          <option>Corporate Event</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <input type="number" name="guests" placeholder="Number of Guests" required />
+      </div>
+      <div class="form-group">
+        <textarea name="message" rows="4" placeholder="Additional Message"></textarea>
+      </div>
+      <button type="submit" class="cta-button">Submit Inquiry</button>
+    </form>
+  </div>
+</section>
+<section class="contact-section" id="contact">
+  <div class="contact-container">
+    <h2>Contact Us</h2>
+    <p class="contact-info">📍 Sri Venkateswara Function Hall, Anantapur, Andhra Pradesh</p>
+    <p class="contact-info">📞 <a href="tel:+919999999999">+91 99999 99999</a></p>
+    <p class="contact-info">📧 <a href="mailto:info@svfunctionhall.com">info@svfunctionhall.com</a></p>
+    
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps?q=Anantapur&output=embed"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </div>
+</section>
+
+
+  <div class="credit-footer">
+    <img src="logo.png" alt="Web by Ramakanth Logo"/>
+    <span>WEB BY RAMAKANTH</span>
+  </div>
+
+</body>
+</html>
